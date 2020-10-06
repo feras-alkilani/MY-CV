@@ -1,0 +1,482 @@
+body {
+    overflow: hidden
+}
+
+h1, h2, h3, h4, h5, .lead { font-family: 'Droid Sans', sans-serif }
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/** 
+    Start Overriding Bootstrap
+*/
+
+.container { overflow: hidden }
+
+.navbar { min-height: 70px }
+
+.navbar-toggle {
+    margin-top: 18px !important;
+  }
+
+.navbar-default { background: none !important; border: none !important }
+
+.navbar-default .navbar-brand {
+    margin-top: 10px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #FFF
+}
+
+.navbar-default .navbar-brand span { color: #FF3547 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form { border: none}
+
+.hvr-underline-from-left:before {
+    background: #FF3547 !important;
+    height: 3px !important;
+    bottom: 10px !important
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus { color: #FF3547 !important }
+
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav > li > a {
+        font-size: 20px;
+        line-height: 40px;
+        color: #FFF;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        margin-right: 10px
+    }
+    
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        background-color: transparent !important;
+        color: #FFF
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-fixed-top .navbar-collapse {
+    height:700px;
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        font-size: 20px;
+        line-height: 40px;
+        color: #FFF;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        text-align: center
+    }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        background-color: transparent;
+        color: #FFF
+    }
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+    background-color: #FAFAFA !important;
+    height: 70px;
+    transition: background-color 1s ease-in-out 0s;
+    box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25)
+}
+.navbar.solid .navbar-brand {
+    color: #262626;
+    transition: color 1s ease-in-out 0s;
+}
+.navbar.solid .navbar-nav > li > a {
+    color: #262626;
+    transition: color 1s ease-in-out 0s;
+}
+
+.navbar-default .navbar-nav > li > a:hover { color: #FFF !important }
+
+.navbar.solid .navbar-nav > li > a:hover,
+.navbar.solid .navbar-nav > li > a:focus { color: #262626 !important }
+
+/**
+    End Overriding Bootstrap
+*/
+
+/* Start Header Section */
+
+.header {
+    background: url('../images/header.png') no-repeat center center fixed;
+    min-height: 600px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.header .overlay {
+    background: rgba(49, 55, 61, .8);
+    width: 100%;
+    height: 100%;
+    min-height: 600px   
+}
+
+.header .intro {
+    color: #FFF;
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+
+.header .intro .h1 {
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2px
+}
+
+.header .intro .social-icon { padding-top: 20px }
+
+.header .intro .social-icon ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px
+}
+
+.header .intro .social-icon ul li a {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #FFF;
+    font-size: 14px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.header .intro .social-icon ul li:hover a { background-color: #FF3547 }
+
+.header .intro .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.header .intro .arrow i {
+    border: 2px solid #7B7B7B;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #FFF;
+    transition: all .5s ease-in-out
+}
+
+.header .arrow i:hover { background-color: #FF3547; color: #FFF }
+
+/* End Header Section */
+
+/* Start About Me Section */
+
+.about-me {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #EFEFEF
+}
+
+.about-me .personal-info .h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid #FF3547;
+    position: relative;
+    left: 0;
+    top: 3px
+}
+
+.about-me .personal-info .lead {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 18px
+}
+
+.about-me .about-list { font-style: italic; font-size: 18px }
+
+.about-me .about-list ul li { margin-bottom: 20px }
+
+.about-me .about-list ul li .title {
+    color: #a1a1a1;
+    font-weight: 700;
+    padding-bottom: 2px;
+    margin-right: 5px;
+    border-bottom: 1px dotted #a1a1a1
+}
+
+.about-me .personal-info .btn-primary { margin-right: 15px; border-radius: 4px }
+
+.about-me .personal-info .btn-primary { border-radius: 4px }
+
+/* End About Me Section */
+
+/* Start My Skills */
+
+.my-skills {
+    background: url('../images/skills.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFF
+}
+
+.my-skills .overlay {
+    background: rgba(2, 2, 2, .8);
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.my-skills .h1 { letter-spacing: 3px }
+
+.my-skills .h1 span { color: #FF3547 }
+
+.my-skills .progress { height: 30px; margin-top: 40px }
+
+.my-skills .progress-bar {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700
+}
+
+/* End My Skills */
+
+/* Start My Portfolio Section */
+
+.my-portfolio {
+    background-color: #FAFAFA;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.my-portfolio .h1 { letter-spacing: 3px; margin-bottom: 50px }
+
+.my-portfolio .h1 span { color: #FF3547 }
+
+.my-portfolio .img-profile { margin-bottom: 30px }
+
+.my-portfolio .image {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.image:before {
+    content: "";
+    width: 100%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+.my-portfolio .image a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: calc((100% - 103.56px)/2)
+}
+
+.my-portfolio .image .btn-default {
+    background-color: transparent !important;
+    color: #FFF;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out
+}
+
+.my-portfolio .image .btn-default:hover { background-color: #FF3547 !important }
+
+.image:hover img { animation: moveSlideshow 3s linear }
+
+@keyframes moveSlideshow { 100% { transform: translateY(-60%); } }
+
+/* End My Portfolio Section */
+
+/* Start Contact Infotmation Section */
+
+.contact {
+    background: url('../images/contact-us.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFF
+}
+
+.contact .overlay {
+    background: rgba(9, 9, 9, .8);
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #DDD
+}
+
+.contact .overlay i { color: #FF3547 }
+
+.contact .overlay .lead { margin-bottom: 40px }
+
+.contact .overlay textarea { height: 106px }
+
+.contact input[type="text"],
+.contact textarea {
+    background: rgba(82, 78, 78, .5);
+    border: none;
+    color: #FFF;
+    font-size: 18px
+}
+
+.contact .btn-danger { font-size: 18px }
+
+/* End Contact Infotmation Section */
+
+/* Start Footer */
+
+footer { padding-top: 30px; padding-bottom: 30px; background: #EFEFEF }
+
+footer .copyright { font-size: 24px }
+
+footer .copyright span { font-style: italic; color: #FF3547 }
+
+@media (max-width: 446px) {
+    footer .copyright { font-size: 16px }
+    .header .intro { padding-top: 80px }
+}
+
+/* End Footer */
+
+/* Start Scroll To Top */
+
+#scroll-top{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    background-color: #272727;
+    color: #DDD;
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    display: none
+}
+
+#scroll-top:hover { background-color: #FF3547; color: #FFF }
+
+/* Start Scroll To Top */
+
+/* Start Loading Spinner */
+
+.loading-spinner {
+    background: #333;
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999
+}
+
+.sk-cube-grid { width: 40px; height: 40px; margin: 250px auto; }
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #FFF;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; 
+}
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; 
+}
+.sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; 
+}
+.sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; 
+}
+.sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; 
+}
+.sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; 
+}
+.sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s; 
+}
+.sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s; 
+}
+.sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; 
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+} 
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1); 
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+} 
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    } 
+}
+
+/* End Loading Spinner */
